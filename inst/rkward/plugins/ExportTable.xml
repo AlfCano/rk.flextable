@@ -1,0 +1,35 @@
+<!DOCTYPE rkplugin >
+<document>
+	<!--
+		this code was generated using the rkwarddev package.
+	perhaps don't make changes here, but in the rkwarddev script instead!
+	-->
+	<code file="ExportTable.js" />
+	<help file="ExportTable.rkh" />
+	<!--
+		<dependencies>
+		</dependencies>
+	-->
+	<logic>
+		<!--
+			<convert id="!edit!" sources="!edit!" mode="equals" standard="!edit!" />
+		-->
+		<!--
+			<connect governor="!edit!.state" client="!edit!.enabled" />
+		-->
+	</logic>
+	<dialog label="Export Flextable">
+		<row id="row_vFOEFMWPPH">
+			<varselector id="xp_selector" />
+			<column id="clm_vFOEFMWPPH">
+				<varslot id="xp_obj" label="Flextable Object" source="xp_selector" required="true" />
+				<radio id="xp_fmt" label="Export Format">
+					<option label="Microsoft Word (.docx)" value="docx" checked="true" />
+					<option label="PowerPoint (.pptx)" value="pptx" />
+					<option label="HTML (.html)" value="html" />
+				</radio>
+				<browser label="Output File" type="savefile" id="xp_file" />
+			</column>
+		</row>
+	</dialog>
+</document>

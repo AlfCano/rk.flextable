@@ -1,0 +1,45 @@
+<!DOCTYPE rkplugin >
+<document>
+	<!--
+		this code was generated using the rkwarddev package.
+	perhaps don't make changes here, but in the rkwarddev script instead!
+	-->
+	<code file="CreateTable.js" />
+	<help file="CreateTable.rkh" />
+	<!--
+		<dependencies>
+		</dependencies>
+	-->
+	<logic>
+		<!--
+			<convert id="!edit!" sources="!edit!" mode="equals" standard="!edit!" />
+		-->
+		<!--
+			<connect governor="!edit!.state" client="!edit!.enabled" />
+		-->
+	</logic>
+	<dialog label="Create Table">
+		<row id="row_vDATSMBSCD">
+			<varselector id="ft_selector" />
+			<column id="clm_vDATSMBSCD">
+				<varslot id="ft_df" label="Dataframe to format" source="ft_selector" classes="data.frame" required="true" />
+				<dropdown id="ft_theme" label="Apply Theme">
+					<option label="Scientific (theme_booktabs)" value="booktabs" checked="true" />
+					<option label="Minimal (theme_vanilla)" value="vanilla" />
+					<option label="Boxed (theme_box)" value="box" />
+					<option label="Striped (theme_zebra)" value="zebra" />
+					<option label="Colorful (theme_alafoli)" value="alafoli" />
+					<option label="Dark (theme_vader)" value="vader" />
+					<option label="None (No theme)" value="none" />
+				</dropdown>
+				<frame label="Refinements" id="frm_Refnmnts">
+					<checkbox id="ft_autofit" label="Autofit column widths" value="1" checked="true" />
+					<checkbox id="ft_bold_header" label="Bold Header" value="1" checked="true" />
+					<checkbox id="ft_center_header" label="Center Align Header" value="1" checked="true" />
+					<checkbox id="ft_footer" label="Add Footer (Row count)" value="1" />
+				</frame>
+				<saveobject label="Save table object as" checkable="true" checked="true" initial="my_ft" id="ft_save_obj" />
+			</column>
+		</row>
+	</dialog>
+</document>
