@@ -29,13 +29,13 @@ function calculate(is_preview){
     var theme = getValue("ft_theme");
     var do_autofit = getValue("ft_autofit");
     var do_footer = getValue("ft_footer");
-    
+
     // Style Tab
     var do_bold = getValue("ft_bold_header");
     var do_center = getValue("ft_center_header");
     var do_zebra = getValue("ft_zebra");
     var zebra_col = getValue("ft_zebra_color");
-    
+
     // Conditional Tab
     var do_cond = getValue("ft_cond_enable");
     var cond_var_full = getValue("ft_cond_col");
@@ -56,7 +56,7 @@ function calculate(is_preview){
         // 2. Formatting
         if (do_bold == "1") cmd += " %>% flextable::bold(part = \"header\")";
         if (do_center == "1") cmd += " %>% flextable::align(align = \"center\", part = \"header\")";
-        
+
         if (do_zebra == "1") {
             // Apply alternate row colors to odd rows
             cmd += " %>% flextable::bg(i = seq(1, nrow(" + df + "), 2), bg = \"" + zebra_col + "\")";
