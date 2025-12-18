@@ -19,25 +19,57 @@
 		-->
 	</logic>
 	<dialog label="Create Table">
-		<row id="row_vDATSMBSCD">
+		<row id="row_vDTDTDATSM">
 			<varselector id="ft_selector" />
-			<column id="clm_vDATSMBSCD">
-				<varslot id="ft_df" label="Dataframe to format" source="ft_selector" classes="data.frame" required="true" />
-				<dropdown id="ft_theme" label="Apply Theme">
-					<option label="Scientific (theme_booktabs)" value="booktabs" checked="true" />
-					<option label="Minimal (theme_vanilla)" value="vanilla" />
-					<option label="Boxed (theme_box)" value="box" />
-					<option label="Striped (theme_zebra)" value="zebra" />
-					<option label="Colorful (theme_alafoli)" value="alafoli" />
-					<option label="Dark (theme_vader)" value="vader" />
-					<option label="None (No theme)" value="none" />
-				</dropdown>
-				<frame label="Refinements" id="frm_Refnmnts">
-					<checkbox id="ft_autofit" label="Autofit column widths" value="1" checked="true" />
-					<checkbox id="ft_bold_header" label="Bold Header" value="1" checked="true" />
-					<checkbox id="ft_center_header" label="Center Align Header" value="1" checked="true" />
-					<checkbox id="ft_footer" label="Add Footer (Row count)" value="1" />
-				</frame>
+			<column id="clm_tDTDTDATSM">
+				<tabbook>
+					<tab label="Data &amp; Theme" id="tab_DataThem">
+						<column id="clm_vDATSMBSCD">
+							<varslot id="ft_df" label="Dataframe to format" source="ft_selector" classes="data.frame" required="true" />
+							<dropdown id="ft_theme" label="Apply Theme">
+								<option label="Scientific (theme_booktabs)" value="booktabs" checked="true" />
+								<option label="Minimal (theme_vanilla)" value="vanilla" />
+								<option label="Boxed (theme_box)" value="box" />
+								<option label="Striped (theme_zebra)" value="zebra" />
+								<option label="Colorful (theme_alafoli)" value="alafoli" />
+								<option label="Dark (theme_vader)" value="vader" />
+								<option label="None (No theme)" value="none" />
+							</dropdown>
+							<checkbox id="ft_autofit" label="Autofit column widths" value="1" checked="true" />
+							<checkbox id="ft_footer" label="Add Footer (Row count)" value="1" />
+						</column>
+					</tab>
+					<tab label="Style" id="tab_Style">
+						<column id="clm_fHHBH1CAH1">
+							<frame label="Headers" id="frm_Headers">
+								<checkbox id="ft_bold_header" label="Bold Headers" value="1" checked="true" />
+								<checkbox id="ft_center_header" label="Center Align Headers" value="1" checked="true" />
+							</frame>
+							<frame label="Rows" id="frm_Rows">
+								<checkbox id="ft_zebra" label="Apply Alternating Row Colors (Zebra)" value="1" />
+								<input label="Zebra Color" id="ft_zebra_color" initial="#F0F0F0" />
+							</frame>
+						</column>
+					</tab>
+					<tab label="Conditional Formatting" id="tab_CndtnlFr">
+						<column id="clm_cECF1RHCRH">
+							<checkbox id="ft_cond_enable" label="Enable Conditional Formatting" value="1" />
+							<frame label="Rule: Highlight Cell if..." id="frm_RlHghlgC">
+								<varslot id="ft_cond_col" label="Target Column (Numeric)" source="ft_selector" />
+								<dropdown id="ft_cond_op" label="Operator">
+									<option label="Less than (&lt;)" value="&lt;" checked="true" />
+									<option label="Greater than (&gt;)" value="&gt;" />
+									<option label="Equal to (==)" value="==" />
+									<option label="Not Equal (!=)" value="!=" />
+									<option label="Less or Equal (&lt;=)" value="&lt;=" />
+									<option label="Greater or Equal (&gt;=)" value="&gt;=" />
+								</dropdown>
+								<input label="Comparison Value (e.g. 0.05)" id="ft_cond_val" initial="0.05" />
+								<input label="Highlight Color" id="ft_cond_bg" initial="orange" />
+							</frame>
+						</column>
+					</tab>
+				</tabbook>
 				<saveobject label="Save table object as" checkable="true" checked="true" initial="my_ft" id="ft_save_obj" />
 			</column>
 		</row>

@@ -17,18 +17,37 @@
 		</section>
 	-->
 	<settings>
+		<caption id="tab_DataThem" />
 		<setting id="ft_df">
 		</setting>
 		<setting id="ft_theme">
 		</setting>
-		<caption id="frm_Refnmnts" />
 		<setting id="ft_autofit">
 		</setting>
+		<setting id="ft_footer">
+		</setting>
+		<caption id="tab_Style" />
+		<caption id="frm_Headers" />
 		<setting id="ft_bold_header">
 		</setting>
 		<setting id="ft_center_header">
 		</setting>
-		<setting id="ft_footer">
+		<caption id="frm_Rows" />
+		<setting id="ft_zebra">
+		</setting>
+		<setting id="ft_zebra_color">
+		</setting>
+		<caption id="tab_CndtnlFr" />
+		<setting id="ft_cond_enable">
+		</setting>
+		<caption id="frm_RlHghlgC" />
+		<setting id="ft_cond_col">
+		</setting>
+		<setting id="ft_cond_op">
+		</setting>
+		<setting id="ft_cond_val">
+		</setting>
+		<setting id="ft_cond_bg">
 		</setting>
 		<setting id="ft_save_obj">
 		</setting>

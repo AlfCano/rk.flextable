@@ -3,8 +3,7 @@ local({
   # 1. Package Definition and Metadata
   # =========================================================================================
   require(rkwarddev)
-  # Ensure we have a compatible version
-  if(packageVersion("rkwarddev") < "0.07") stop("Please update rkwarddev")
+  rkwarddev.required("0.10-3")
 
   package_about <- rk.XML.about(
     name = "rk.flextable",
@@ -16,19 +15,33 @@ local({
     ),
     about = list(
       desc = "An RKWard plugin for creating, formatting, and exporting publication-ready tables using the flextable library.",
-      version = "0.0.1",
+      version = "0.0.2",
       url = "https://github.com/AlfCano/rk.flextable",
       license = "GPL (>= 3)"
     )
   )
 
-  # Menu Location: Data -> Reporting (flextable)
-  # We use a simple hierarchy list to avoid ambiguity
+  # Menu Location
   common_hierarchy <- list("data", "Reporting (flextable)")
 
   # =========================================================================================
-  # 2. COMPONENT 1: Create Table (THE MAIN COMPONENT)
-  #    Defined as raw objects here, passed to top-level skeleton args later.
+  # 2. JS Helper (Variable Parsing)
+  # =========================================================================================
+  js_parse_helper <- "
+    function getColName(fullPath) {
+        if (!fullPath) return '';
+        if (fullPath.indexOf('$') > -1) {
+            return fullPath.split('$')[1];
+        } else if (fullPath.indexOf('[[') > -1) {
+             var parts = fullPath.split('[[');
+             return parts[1].replace(']]', '').replace(/[\"']/g, '');
+        }
+        return fullPath;
+    }
+  "
+
+  # =========================================================================================
+  # 3. COMPONENT 1: Create Table (MAIN)
   # =========================================================================================
 
   help_create <- rk.rkh.doc(
@@ -37,16 +50,10 @@ local({
     usage = rk.rkh.usage(text = "Select a dataframe, choose a theme, and apply specific formatting options.")
   )
 
-  # UI Widgets
+  # --- Tab 1: Data & Theme ---
   ft_selector <- rk.XML.varselector(id.name = "ft_selector")
 
-  ft_df <- rk.XML.varslot(
-    label = "Dataframe to format",
-    source = "ft_selector",
-    classes = "data.frame",
-    required = TRUE,
-    id.name = "ft_df"
-  )
+  ft_df <- rk.XML.varslot(label = "Dataframe to format", source = "ft_selector", classes = "data.frame", required = TRUE, id.name = "ft_df")
 
   ft_theme <- rk.XML.dropdown(
     label = "Apply Theme",
@@ -62,61 +69,111 @@ local({
     id.name = "ft_theme"
   )
 
-  ft_opts <- rk.XML.frame(
-    rk.XML.cbox(label = "Autofit column widths", value = "1", chk = TRUE, id.name = "ft_autofit"),
-    rk.XML.cbox(label = "Bold Header", value = "1", chk = TRUE, id.name = "ft_bold_header"),
-    rk.XML.cbox(label = "Center Align Header", value = "1", chk = TRUE, id.name = "ft_center_header"),
-    rk.XML.cbox(label = "Add Footer (Row count)", value = "1", id.name = "ft_footer"),
-    label = "Refinements"
-  )
+  ft_autofit <- rk.XML.cbox(label = "Autofit column widths", value = "1", chk = TRUE, id.name = "ft_autofit")
+  ft_footer <- rk.XML.cbox(label = "Add Footer (Row count)", value = "1", id.name = "ft_footer")
+
+  # --- Tab 2: Formatting (Bold, Zebra) ---
+  ft_bold_header <- rk.XML.cbox(label = "Bold Headers", value = "1", chk = TRUE, id.name = "ft_bold_header")
+  ft_center_header <- rk.XML.cbox(label = "Center Align Headers", value = "1", chk = TRUE, id.name = "ft_center_header")
+
+  ft_zebra <- rk.XML.cbox(label = "Apply Alternating Row Colors (Zebra)", value = "1", id.name = "ft_zebra")
+  ft_zebra_col <- rk.XML.input(label = "Zebra Color", initial = "#F0F0F0", id.name = "ft_zebra_color") # Light Gray default
+
+  # --- Tab 3: Conditional Formatting ---
+  ft_cond_enable <- rk.XML.cbox(label = "Enable Conditional Formatting", value = "1", id.name = "ft_cond_enable")
+
+  ft_cond_col <- rk.XML.varslot(label = "Target Column (Numeric)", source = "ft_selector", id.name = "ft_cond_col")
+
+  ft_cond_op <- rk.XML.dropdown(label = "Operator", options = list(
+      "Less than (<)" = c(val = "<", chk=TRUE),
+      "Greater than (>)" = c(val = ">"),
+      "Equal to (==)" = c(val = "=="),
+      "Not Equal (!=)" = c(val = "!="),
+      "Less or Equal (<=)" = c(val = "<="),
+      "Greater or Equal (>=)" = c(val = ">=")
+  ), id.name = "ft_cond_op")
+
+  ft_cond_val <- rk.XML.input(label = "Comparison Value (e.g. 0.05)", initial = "0.05", id.name = "ft_cond_val")
+  ft_cond_color <- rk.XML.input(label = "Highlight Color", initial = "orange", id.name = "ft_cond_bg")
 
   # Save Object
   ft_save <- rk.XML.saveobj(label = "Save table object as", chk = TRUE, initial = "my_ft", id.name = "ft_save_obj")
 
-  # Dialog Layout (No Preview Widget)
+  # Dialog Layout
   dialog_create <- rk.XML.dialog(
     label = "Create Table",
     child = rk.XML.row(
       ft_selector,
-      rk.XML.col(ft_df, ft_theme, ft_opts, ft_save)
+      rk.XML.col(
+          rk.XML.tabbook(tabs = list(
+              "Data & Theme" = rk.XML.col(ft_df, ft_theme, ft_autofit, ft_footer),
+              "Style" = rk.XML.col(
+                  rk.XML.frame(ft_bold_header, ft_center_header, label="Headers"),
+                  rk.XML.frame(ft_zebra, ft_zebra_col, label="Rows")
+              ),
+              "Conditional Formatting" = rk.XML.col(
+                  ft_cond_enable,
+                  rk.XML.frame(ft_cond_col, ft_cond_op, ft_cond_val, ft_cond_color, label="Rule: Highlight Cell if...")
+              )
+          )),
+          ft_save
+      )
     )
   )
 
   # JS Logic
-  js_body_create <- '
+  js_body_create <- paste0(js_parse_helper, '
     var df = getValue("ft_df");
     var theme = getValue("ft_theme");
     var do_autofit = getValue("ft_autofit");
+    var do_footer = getValue("ft_footer");
+
+    // Style Tab
     var do_bold = getValue("ft_bold_header");
     var do_center = getValue("ft_center_header");
-    var do_footer = getValue("ft_footer");
+    var do_zebra = getValue("ft_zebra");
+    var zebra_col = getValue("ft_zebra_color");
+
+    // Conditional Tab
+    var do_cond = getValue("ft_cond_enable");
+    var cond_var_full = getValue("ft_cond_col");
+    var cond_op = getValue("ft_cond_op");
+    var cond_val = getValue("ft_cond_val");
+    var cond_bg = getValue("ft_cond_bg");
 
     var cmd = "";
 
     if (df) {
         cmd = "flextable::flextable(" + df + ")";
 
+        // 1. Theme
         if (theme != "none") {
             cmd += " %>% flextable::theme_" + theme + "()";
         }
 
-        if (do_bold == "1") {
-            cmd += " %>% flextable::bold(part = \\\"header\\\")";
+        // 2. Formatting
+        if (do_bold == "1") cmd += " %>% flextable::bold(part = \\\"header\\\")";
+        if (do_center == "1") cmd += " %>% flextable::align(align = \\\"center\\\", part = \\\"header\\\")";
+
+        if (do_zebra == "1") {
+            // Apply alternate row colors to odd rows
+            cmd += " %>% flextable::bg(i = seq(1, nrow(" + df + "), 2), bg = \\\"" + zebra_col + "\\\")";
         }
 
-        if (do_center == "1") {
-            cmd += " %>% flextable::align(align = \\\"center\\\", part = \\\"header\\\")";
+        // 3. Conditional Formatting
+        if (do_cond == "1" && cond_var_full != "") {
+            var colName = getColName(cond_var_full);
+            // Syntax: bg(i = ~ col < 0.05, j = "col", bg = "orange")
+            // Formula must use the raw column name
+            var formula = "~ " + colName + " " + cond_op + " " + cond_val;
+            cmd += " %>% flextable::bg(i = " + formula + ", j = \\\"" + colName + "\\\", bg = \\\"" + cond_bg + "\\\")";
         }
 
-        if (do_footer == "1") {
-             cmd += " %>% flextable::add_footer_lines(values = paste(\\\"n =\\\", nrow(" + df + ")))";
-        }
-
-        if (do_autofit == "1") {
-            cmd += " %>% flextable::autofit()";
-        }
+        // 4. Extras
+        if (do_footer == "1") cmd += " %>% flextable::add_footer_lines(values = paste(\\\"n =\\\", nrow(" + df + ")))";
+        if (do_autofit == "1") cmd += " %>% flextable::autofit()";
     }
-  '
+  ')
 
   js_calc_create <- paste0(js_body_create, '
     if (cmd != "") {
@@ -124,7 +181,6 @@ local({
     }
   ')
 
-  # Simple Printout (Runs on Submit)
   js_print_create <- '
     if (typeof is_preview === "undefined" || !is_preview) {
       echo("if (exists(\\\"my_ft\\\")) {\\n");
@@ -134,13 +190,8 @@ local({
     }
   '
 
-  # NOTE: We DO NOT wrap this in rk.plugin.component here.
-  # We pass these raw objects to the top-level skeleton arguments.
-
-
   # =========================================================================================
-  # 3. COMPONENT 2: Export Table (THE SUB COMPONENT)
-  #    Defined as a full component object to be passed in the 'components' list.
+  # 4. COMPONENT 2: Export Table
   # =========================================================================================
 
   help_export <- rk.rkh.doc(
@@ -211,7 +262,6 @@ local({
     }
   ')
 
-  # We wrap this one in rk.plugin.component because it's a sub-component
   component_export <- rk.plugin.component(
     "Export Table",
     xml = list(dialog = dialog_export),
@@ -226,17 +276,12 @@ local({
 
 
   # =========================================================================================
-  # 4. BUILD SKELETON
+  # 5. BUILD SKELETON
   # =========================================================================================
 
   rk.plugin.skeleton(
     about = package_about,
     path = ".",
-
-    # -------------------------------------------------------------------------
-    # MAIN COMPONENT ("Create Table")
-    # Defined here at the top level. This creates rk.flextable.xml / .js
-    # -------------------------------------------------------------------------
     xml = list(dialog = dialog_create),
     js = list(
         require = c("flextable", "magrittr"),
@@ -244,32 +289,20 @@ local({
         printout = js_print_create
     ),
     rkh = list(help = help_create),
-
-    # -------------------------------------------------------------------------
-    # SUB COMPONENTS ("Export Table")
-    # Defined in the list. This creates Export_Table.xml / .js
-    # -------------------------------------------------------------------------
     components = list(
         component_export
     ),
-
-    # -------------------------------------------------------------------------
-    # PLUGIN MAP
-    # Defines the menu hierarchy for the Main component.
-    # The Sub-component handles its own via the 'hierarchy' arg in rk.plugin.component
-    # -------------------------------------------------------------------------
     pluginmap = list(
-        name = "Create Table", # Label for the Main Component
+        name = "Create Table",
         hierarchy = common_hierarchy
     ),
-
     create = c("pmap", "xml", "js", "desc", "rkh"),
     load = TRUE,
     overwrite = TRUE,
     show = FALSE
   )
 
-  cat("\nPlugin package 'rk.flextable' (v0.0.1) generated successfully.\n")
+  cat("\nPlugin package 'rk.flextable' (v0.0.2) generated successfully.\n")
   cat("  1. rk.updatePluginMessages(path=\".\")\n")
   cat("  2. devtools::install(\".\")\n")
 })
