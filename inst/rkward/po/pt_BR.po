@@ -1,0 +1,159 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: rk.flextable 0.0.2\n"
+"Report-Msgid-Bugs-To: alfonso.cano@correo.buap.mx\n"
+"POT-Creation-Date: 2026-03-25 10:00-0600\n"
+"PO-Revision-Date: 2026-03-25 10:00-0600\n"
+"Last-Translator: \n"
+"Language-Team: Portuguese (Brazil)\n"
+"Language: pt_BR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "data"
+msgstr "Dados"
+
+msgid "Reporting (flextable)"
+msgstr "Relatórios (flextable)"
+
+msgid "Create Publication Table"
+msgstr "Criar Tabela para Publicação"
+
+msgid "Converts a dataframe into a formatted 'flextable' object suitable for Word/PowerPoint."
+msgstr "Converte um data frame em um objeto 'flextable' formatado, adequado para Word/PowerPoint."
+
+msgid "Select a dataframe, choose a theme, and apply specific formatting options."
+msgstr "Selecione um data frame, escolha um tema e aplique opções de formatação específicas."
+
+msgid "Dataframe to format"
+msgstr "Data frame a formatar"
+
+msgid "Apply Theme"
+msgstr "Aplicar Tema"
+
+msgid "Scientific (theme_booktabs)"
+msgstr "Científico (theme_booktabs)"
+
+msgid "Minimal (theme_vanilla)"
+msgstr "Minimalista (theme_vanilla)"
+
+msgid "Boxed (theme_box)"
+msgstr "Com bordas (theme_box)"
+
+msgid "Striped (theme_zebra)"
+msgstr "Listrado (theme_zebra)"
+
+msgid "Colorful (theme_alafoli)"
+msgstr "Colorido (theme_alafoli)"
+
+msgid "Dark (theme_vader)"
+msgstr "Escuro (theme_vader)"
+
+msgid "None (No theme)"
+msgstr "Nenhum (Sem tema)"
+
+msgid "Autofit column widths"
+msgstr "Ajustar largura das colunas automaticamente"
+
+msgid "Add Footer (Row count)"
+msgstr "Adicionar Rodapé (Contagem de linhas)"
+
+msgid "Bold Headers"
+msgstr "Cabeçalhos em Negrito"
+
+msgid "Center Align Headers"
+msgstr "Centralizar Cabeçalhos"
+
+msgid "Apply Alternating Row Colors (Zebra)"
+msgstr "Aplicar Cores de Linha Alternadas (Zebra)"
+
+msgid "Zebra Color"
+msgstr "Cor Zebra"
+
+msgid "Enable Conditional Formatting"
+msgstr "Ativar Formatação Condicional"
+
+msgid "Target Column (Numeric)"
+msgstr "Coluna Alvo (Numérica)"
+
+msgid "Operator"
+msgstr "Operador"
+
+msgid "Less than (<)"
+msgstr "Menor que (<)"
+
+msgid "Greater than (>)"
+msgstr "Maior que (>)"
+
+msgid "Equal to (==)"
+msgstr "Igual a (==)"
+
+msgid "Not Equal (!=)"
+msgstr "Diferente de (!=)"
+
+msgid "Less or Equal (<=)"
+msgstr "Menor ou Igual (<=)"
+
+msgid "Greater or Equal (>=)"
+msgstr "Maior ou Igual (>=)"
+
+msgid "Comparison Value (e.g. 0.05)"
+msgstr "Valor de Comparação (ex. 0.05)"
+
+msgid "Highlight Color"
+msgstr "Cor de Destaque"
+
+msgid "Save table object as"
+msgstr "Salvar objeto da tabela como"
+
+msgid "Data & Theme"
+msgstr "Dados e Tema"
+
+msgid "Style"
+msgstr "Estilo"
+
+msgid "Headers"
+msgstr "Cabeçalhos"
+
+msgid "Rows"
+msgstr "Linhas"
+
+msgid "Conditional Formatting"
+msgstr "Formatação Condicional"
+
+msgid "Rule: Highlight Cell if..."
+msgstr "Regra: Destacar Célula se..."
+
+msgid "Create Table"
+msgstr "Criar Tabela"
+
+msgid "Export Flextable"
+msgstr "Exportar Flextable"
+
+msgid "Export a previously created flextable object to Word (.docx) or PowerPoint (.pptx)."
+msgstr "Exporta um objeto flextable criado anteriormente para o Word (.docx) ou PowerPoint (.pptx)."
+
+msgid "Select a 'flextable' object from your workspace and specify the output file location."
+msgstr "Selecione um objeto 'flextable' do seu espaço de trabalho e especifique o local do arquivo de saída."
+
+msgid "Flextable Object"
+msgstr "Objeto Flextable"
+
+msgid "Export Format"
+msgstr "Formato de Exportação"
+
+msgid "Microsoft Word (.docx)"
+msgstr "Microsoft Word (.docx)"
+
+msgid "PowerPoint (.pptx)"
+msgstr "PowerPoint (.pptx)"
+
+msgid "HTML (.html)"
+msgstr "HTML (.html)"
+
+msgid "Output File"
+msgstr "Arquivo de Saída"
+
+msgid "Export Table"
+msgstr "Exportar Tabela"

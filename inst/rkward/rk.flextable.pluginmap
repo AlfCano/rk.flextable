@@ -20,8 +20,8 @@
 		name="rk.flextable"
 		shortinfo="An RKWard plugin for creating, formatting, and exporting publication-ready tables using the flextable library."
 		longinfo="An RKWard plugin for creating, formatting, and exporting publication-ready tables using the flextable library."
-		version="0.0.2"
-		releasedate="2025-12-18"
+		version="0.0.3"
+		releasedate="2026-04-18"
 		url="https://github.com/AlfCano/rk.flextable"
 		license="GPL (&gt;= 3)"
 	>

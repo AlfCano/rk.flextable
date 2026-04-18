@@ -1,0 +1,98 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: rk.flextable 0.0.2\n"
+"Report-Msgid-Bugs-To: alfonso.cano@correo.buap.mx\n"
+"POT-Creation-Date: 2026-03-25 10:00-0600\n"
+"PO-Revision-Date: 2026-03-25 10:00-0600\n"
+"Last-Translator: \n"
+"Language-Team: Spanish\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "data"
+msgstr "Datos"
+
+msgid "Reporting (flextable)"
+msgstr "Informes (flextable)"
+
+msgid "Create Publication Table"
+msgstr "Crear Tabla de Publicación"
+
+msgid "Converts a dataframe into a formatted 'flextable' object suitable for Word/PowerPoint."
+msgstr "Convierte un marco de datos en un objeto 'flextable' formateado adecuado para Word/PowerPoint."
+
+msgid "Select a dataframe, choose a theme, and apply specific formatting options."
+msgstr "Seleccione un marco de datos, elija un tema y aplique opciones de formato específicas."
+
+msgid "Dataframe to format"
+msgstr "Marco de datos a formatear"
+
+msgid "Apply Theme"
+msgstr "Aplicar Tema"
+
+msgid "Scientific (theme_booktabs)"
+msgstr "Científico (theme_booktabs)"
+
+msgid "Minimal (theme_vanilla)"
+msgstr "Minimalista (theme_vanilla)"
+
+msgid "Boxed (theme_box)"
+msgstr "En caja (theme_box)"
+
+msgid "Striped (theme_zebra)"
+msgstr "A rayas (theme_zebra)"
+
+msgid "Colorful (theme_alafoli)"
+msgstr "Colorido (theme_alafoli)"
+
+msgid "Dark (theme_vader)"
+msgstr "Oscuro (theme_vader)"
+
+msgid "None (No theme)"
+msgstr "Ninguno (Sin tema)"
+
+msgid "Autofit column widths"
+msgstr "Autoajustar ancho de columnas"
+
+msgid "Add Footer (Row count)"
+msgstr "Añadir Pie de página (Recuento de filas)"
+
+msgid "Bold Headers"
+msgstr "Encabezados en Negrita"
+
+msgid "Center Align Headers"
+msgstr "Centrar Encabezados"
+
+msgid "Apply Alternating Row Colors (Zebra)"
+msgstr "Aplicar Colores de Fila Alternos (Cebra)"
+
+msgid "Zebra Color"
+msgstr "Color Cebra"
+
+msgid "Enable Conditional Formatting"
+msgstr "Habilitar Formato Condicional"
+
+msgid "Target Column (Numeric)"
+msgstr "Columna Objetivo (Numérica)"
+
+msgid "Operator"
+msgstr "Operador"
+
+msgid "Less than (<)"
+msgstr "Menor que (<)"
+
+msgid "Greater than (>)"
+msgstr "Mayor que (>)"
+
+msgid "Equal to (==)"
+msgstr "Igual a (==)"
+
+msgid "Not Equal (!=)"
+msgstr "No Igual (!=)"
+
+msgid "Less or Equal (<=)"
+msgstr "Menor o Igual (<=)"
+
+msgid "Gr

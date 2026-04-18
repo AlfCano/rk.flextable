@@ -2,8 +2,11 @@
 
 > **Publication-Ready Tables for RKWard**
 
-![Version](https://img.shields.io/badge/Version-0.0.2-blue.svg)
-![License](https://img.shields.io/badge/License-GPL--3-green.svg)
+![Version](https://img.shields.io/badge/Version-0.0.3-blue.svg)
+[![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+![RKWard](https://img.shields.io/badge/Platform-RKWard-green)
+[![R Linter](https://github.com/AlfCano/rk.flextable/actions/workflows/lintr.yml/badge.svg)](https://github.com/AlfCano/rk.flextable/actions/workflows/lintr.yml)
+![AI Gemini](https://img.shields.io/badge/AI-Gemini-4285F4?logo=googlegemini&logoColor=white)
 
 **rk.flextable** is an RKWard plugin that provides a graphical interface for the powerful [`flextable`](https://davidgohel.github.io/flextable/) package. It allows users to easily create, format, and export professional tables for scientific publications and reports directly from the RKWard GUI, without writing complex R code.
 
@@ -20,6 +23,16 @@
     *   Microsoft Word (`.docx`)
     *   Microsoft PowerPoint (`.pptx`)
     *   HTML
+    
+## 🌍 Internationalization
+
+The interface is fully localized to match your RKWard language settings:
+
+*   🇺🇸 **English** (Default)
+*   🇪🇸 **Spanish** (`es`)
+*   🇫🇷 **French** (`fr`)
+*   🇩🇪 **German** (`de`)
+*   🇧🇷 **Portuguese** (Brazil) (`pt_BR`)    
 
 ## Installation
 

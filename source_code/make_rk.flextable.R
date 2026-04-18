@@ -15,7 +15,7 @@ local({
     ),
     about = list(
       desc = "An RKWard plugin for creating, formatting, and exporting publication-ready tables using the flextable library.",
-      version = "0.0.2",
+      version = "0.0.3",
       url = "https://github.com/AlfCano/rk.flextable",
       license = "GPL (>= 3)"
     )
