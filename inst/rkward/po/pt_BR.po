@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: rk.flextable 0.0.2\n"
+"Project-Id-Version: rk.flextable 0.0.4\n"
 "Report-Msgid-Bugs-To: alfonso.cano@correo.buap.mx\n"
 "POT-Creation-Date: 2026-03-25 10:00-0600\n"
 "PO-Revision-Date: 2026-03-25 10:00-0600\n"
@@ -101,8 +101,14 @@ msgstr "Maior ou Igual (>=)"
 msgid "Comparison Value (e.g. 0.05)"
 msgstr "Valor de Comparação (ex. 0.05)"
 
+msgid "Value"
+msgstr "Valor"
+
 msgid "Highlight Color"
 msgstr "Cor de Destaque"
+
+msgid "Color"
+msgstr "Cor"
 
 msgid "Save table object as"
 msgstr "Salvar objeto da tabela como"
@@ -118,6 +124,9 @@ msgstr "Cabeçalhos"
 
 msgid "Rows"
 msgstr "Linhas"
+
+msgid "Conditional"
+msgstr "Condicional"
 
 msgid "Conditional Formatting"
 msgstr "Formatação Condicional"
@@ -135,7 +144,7 @@ msgid "Export a previously created flextable object to Word (.docx) or PowerPoin
 msgstr "Exporta um objeto flextable criado anteriormente para o Word (.docx) ou PowerPoint (.pptx)."
 
 msgid "Select a 'flextable' object from your workspace and specify the output file location."
-msgstr "Selecione um objeto 'flextable' do seu espaço de trabalho e especifique o local do arquivo de saída."
+msgstr "Selecione um objeto 'flextable' do espaço de trabalho e especifique o local do arquivo de saída."
 
 msgid "Flextable Object"
 msgstr "Objeto Flextable"
@@ -146,14 +155,102 @@ msgstr "Formato de Exportação"
 msgid "Microsoft Word (.docx)"
 msgstr "Microsoft Word (.docx)"
 
+msgid "Word (.docx)"
+msgstr "Word (.docx)"
+
 msgid "PowerPoint (.pptx)"
 msgstr "PowerPoint (.pptx)"
 
 msgid "HTML (.html)"
 msgstr "HTML (.html)"
 
+msgid "HTML"
+msgstr "HTML"
+
 msgid "Output File"
 msgstr "Arquivo de Saída"
 
 msgid "Export Table"
 msgstr "Exportar Tabela"
+
+# =======================================================
+# NUEVAS CADENAS (Agregadas en v0.0.4)
+# =======================================================
+
+msgid "file"
+msgstr "Arquivo"
+
+msgid "Workspace & RDS"
+msgstr "Área de Trabalho e RDS"
+
+msgid "Advanced Formatting"
+msgstr "Formatação Avançada"
+
+msgid "Advanced Flextable Formatting"
+msgstr "Formatação Avançada de Flextable"
+
+msgid "Flextable Object to Modify"
+msgstr "Objeto Flextable a Modificar"
+
+msgid "None (Keep current theme)"
+msgstr "Nenhum (Manter tema atual)"
+
+msgid "Neon/Retro (theme_tron)"
+msgstr "Neon/Retrô (theme_tron)"
+
+msgid "Table Layout"
+msgstr "Layout da Tabela"
+
+msgid "Autofit (Adjusts automatically to content)"
+msgstr "Ajuste automático (Ajusta automaticamente ao conteúdo)"
+
+msgid "Fixed (Fixed and equal column widths)"
+msgstr "Fixo (Larguras de coluna fixas e iguais)"
+
+msgid "Table Width Proportion (0.1 to 1.0)"
+msgstr "Proporção da Largura da Tabela (0.1 a 1.0)"
+
+msgid "Table Caption (Title)"
+msgstr "Legenda da Tabela (Título)"
+
+msgid "Caption Font Size (px)"
+msgstr "Tamanho da Fonte da Legenda (px)"
+
+msgid "<i>Note: Styling the caption font uses the 'officer' package automatically.</i>"
+msgstr "<i>Nota: O estilo da fonte da legenda utiliza o pacote 'officer' automaticamente.</i>"
+
+msgid "Footer Text (e.g., Source: ENOE 1T)"
+msgstr "Texto do Rodapé (ex.: Fonte: ENOE 1T)"
+
+msgid "Footer Font Size (px)"
+msgstr "Tamanho da Fonte do Rodapé (px)"
+
+msgid "Save formatted table as"
+msgstr "Salvar tabela formatada como"
+
+msgid "Layout & Theme"
+msgstr "Layout e Tema"
+
+msgid "Caption (Title)"
+msgstr "Legenda (Título)"
+
+msgid "Footer & Output"
+msgstr "Rodapé e Saída"
+
+msgid "Save Object to RDS"
+msgstr "Salvar Objeto em RDS"
+
+msgid "Object to save (Table, Plot, Data.frame, List...)"
+msgstr "Objeto a salvar (Tabela, Gráfico, Data frame, Lista...)"
+
+msgid "Save as (.rds)"
+msgstr "Salvar como (.rds)"
+
+msgid "Load Object from RDS"
+msgstr "Carregar Objeto do RDS"
+
+msgid "Select .rds file to load"
+msgstr "Selecione o arquivo .rds para carregar"
+
+msgid "Variable Name in Workspace"
+msgstr "Nome da Variável na Área de Trabalho"

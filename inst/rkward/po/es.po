@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: rk.flextable 0.0.2\n"
+"Project-Id-Version: rk.flextable 0.0.4\n"
 "Report-Msgid-Bugs-To: alfonso.cano@correo.buap.mx\n"
 "POT-Creation-Date: 2026-03-25 10:00-0600\n"
 "PO-Revision-Date: 2026-03-25 10:00-0600\n"
@@ -95,4 +95,161 @@ msgstr "No Igual (!=)"
 msgid "Less or Equal (<=)"
 msgstr "Menor o Igual (<=)"
 
-msgid "Gr
+msgid "Greater or Equal (>=)"
+msgstr "Mayor o Igual (>=)"
+
+msgid "Value"
+msgstr "Valor"
+
+msgid "Color"
+msgstr "Color"
+
+msgid "Rule: Highlight Cell if..."
+msgstr "Regla: Resaltar Celda si..."
+
+msgid "Save table object as"
+msgstr "Guardar objeto de tabla como"
+
+msgid "Create Table"
+msgstr "Crear Tabla"
+
+msgid "Data & Theme"
+msgstr "Datos y Tema"
+
+msgid "Style"
+msgstr "Estilo"
+
+msgid "Headers"
+msgstr "Encabezados"
+
+msgid "Rows"
+msgstr "Filas"
+
+msgid "Conditional"
+msgstr "Condicional"
+
+msgid "Flextable Created"
+msgstr "Flextable Creada"
+
+# ==========================================================
+# Cadenas del Componente 2 (Export Table)
+# ==========================================================
+msgid "Export Flextable"
+msgstr "Exportar Flextable"
+
+msgid "Flextable Object"
+msgstr "Objeto Flextable"
+
+msgid "Export Format"
+msgstr "Formato de Exportación"
+
+msgid "Word (.docx)"
+msgstr "Word (.docx)"
+
+msgid "PowerPoint (.pptx)"
+msgstr "PowerPoint (.pptx)"
+
+msgid "HTML"
+msgstr "HTML"
+
+msgid "Output File"
+msgstr "Archivo de Salida"
+
+msgid "Export Table"
+msgstr "Exportar Tabla"
+
+msgid "Exporting Flextable..."
+msgstr "Exportando Flextable..."
+
+# ==========================================================
+# Cadenas del Componente 3 (Advanced Formatting v0.0.4)
+# ==========================================================
+msgid "Advanced Flextable Formatting"
+msgstr "Formato Avanzado de Flextable"
+
+msgid "Advanced Formatting"
+msgstr "Formato Avanzado"
+
+msgid "Flextable Object to Modify"
+msgstr "Objeto Flextable a Modificar"
+
+msgid "None (Keep current theme)"
+msgstr "Ninguno (Mantener tema actual)"
+
+msgid "Academic (theme_booktabs)"
+msgstr "Académico (theme_booktabs)"
+
+msgid "Neon/Retro (theme_tron)"
+msgstr "Neón/Retro (theme_tron)"
+
+msgid "Table Layout"
+msgstr "Diseño de Tabla (Layout)"
+
+msgid "Autofit (Adjusts automatically to content)"
+msgstr "Autoajustar (Se ajusta automáticamente al contenido)"
+
+msgid "Fixed (Fixed and equal column widths)"
+msgstr "Fijo (Ancho de columnas fijo e igual)"
+
+msgid "Table Width Proportion (0.1 to 1.0)"
+msgstr "Proporción del Ancho de Tabla (0.1 a 1.0)"
+
+msgid "Table Caption (Title)"
+msgstr "Título de la Tabla (Caption)"
+
+msgid "Caption Font Size (px)"
+msgstr "Tamaño de letra del Título (px)"
+
+msgid "Footer Text (e.g., Source: ENOE 1T)"
+msgstr "Texto al pie (ej., Fuente: ENOE 1T)"
+
+msgid "Footer Font Size (px)"
+msgstr "Tamaño de letra del Pie (px)"
+
+msgid "Save formatted table as"
+msgstr "Guardar tabla formateada como"
+
+msgid "Layout & Theme"
+msgstr "Diseño y Tema"
+
+msgid "Caption (Title)"
+msgstr "Título (Caption)"
+
+msgid "<i>Note: Styling the caption font uses the 'officer' package automatically.</i>"
+msgstr "<i>Nota: Dar estilo a la fuente del título utiliza el paquete 'officer' automáticamente.</i>"
+
+msgid "Footer & Output"
+msgstr "Pie de tabla y Salida"
+
+# ==========================================================
+# Cadenas de Componentes 4 y 5 (Workspace & RDS v0.0.4)
+# ==========================================================
+msgid "file"
+msgstr "Archivo"
+
+msgid "Workspace & RDS"
+msgstr "Espacio de Trabajo y RDS"
+
+msgid "Save Object to RDS"
+msgstr "Guardar Objeto en RDS"
+
+msgid "Object to save (Table, Plot, Data.frame, List...)"
+msgstr "Objeto a guardar (Tabla, Gráfico, Data.frame, Lista...)"
+
+msgid "Save as (.rds)"
+msgstr "Guardar como (.rds)"
+
+msgid "Object Exported to RDS"
+msgstr "Objeto Exportado a RDS"
+
+msgid "Load Object from RDS"
+msgstr "Cargar Objeto desde RDS"
+
+msgid "Select .rds file to load"
+msgstr "Seleccione archivo .rds a cargar"
+
+msgid "Variable Name in Workspace"
+msgstr "Nombre de la Variable en el Espacio de Trabajo"
+
+msgid "Object Loaded from RDS"
+msgstr "Objeto Cargado desde RDS"

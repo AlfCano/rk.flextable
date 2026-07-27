@@ -1,0 +1,27 @@
+<!DOCTYPE rkplugin >
+<document>
+	<!--
+		this code was generated using the rkwarddev package.
+	perhaps don't make changes here, but in the rkwarddev script instead!
+	-->
+	<code file="LoadObjectfromRDS.js" />
+	<help file="LoadObjectfromRDS.rkh" />
+	<!--
+		<dependencies>
+		</dependencies>
+	-->
+	<logic>
+		<!--
+			<convert id="!edit!" sources="!edit!" mode="equals" standard="!edit!" />
+		-->
+		<!--
+			<connect governor="!edit!.state" client="!edit!.enabled" />
+		-->
+	</logic>
+	<dialog label="Load Object from RDS">
+		<column id="clm_brwsrlSVNW">
+			<browser label="Select .rds file to load" type="file" id="rds_ld_file" />
+			<input label="Variable Name in Workspace" id="rds_ld_name" initial="loaded_obj" required="true" />
+		</column>
+	</dialog>
+</document>

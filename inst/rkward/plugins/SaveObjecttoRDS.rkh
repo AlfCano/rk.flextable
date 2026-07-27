@@ -14,11 +14,9 @@
 		</section>
 	-->
 	<settings>
-		<setting id="xp_obj">
+		<setting id="rds_sv_obj">
 		</setting>
-		<setting id="xp_fmt">
-		</setting>
-		<setting id="xp_file">
+		<setting id="rds_sv_file">
 		</setting>
 	</settings>
 	<!--

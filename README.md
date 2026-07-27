@@ -2,7 +2,7 @@
 
 > **Publication-Ready Tables for RKWard**
 
-![Version](https://img.shields.io/badge/Version-0.0.3-blue.svg)
+![Version](https://img.shields.io/badge/Version-0.0.4-blue.svg)
 [![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 ![RKWard](https://img.shields.io/badge/Platform-RKWard-green)
 [![R Linter](https://github.com/AlfCano/rk.flextable/actions/workflows/lintr.yml/badge.svg)](https://github.com/AlfCano/rk.flextable/actions/workflows/lintr.yml)
@@ -23,6 +23,8 @@
     *   Microsoft Word (`.docx`)
     *   Microsoft PowerPoint (`.pptx`)
     *   HTML
+*   **Advanced Table Formatting**: Add table captions (titles), custom footers with font size control, and adjust table width proportions or fixed layouts.
+*   **Workspace Management (RDS)**: Save and load any R object (dataframes, tables, models, plots) natively as `.rds` files directly from the GUI.
     
 ## 🌍 Internationalization
 
@@ -36,10 +38,10 @@ The interface is fully localized to match your RKWard language settings:
 
 ## Installation
 
-You can install this plugin directly from GitHub using `devtools` within RKWard:
+You can install this plugin directly from GitHub using `remotes` within RKWard:
 
 ```r
-require(devtools)
+require(remotes)
 install_github("AlfCano/rk.flextable")
 ```
 
@@ -75,6 +77,24 @@ Use this tool to save your table to a file.
 *   **Input**: Select the `flextable` object created in the previous step (default name `my_ft`).
 *   **Format**: Choose Word, PowerPoint, or HTML.
 *   **Output**: Select a destination file path.
+
+### 3. Advanced Formatting
+Use this tool to refine an already created flextable with publication-ready details.
+*   **Layout & Theme**: Apply extended themes (Colorful, Dark, Neon/Retro), adjust table width proportions (0.1 to 1.0), and switch between Autofit and Fixed layouts.
+*   **Caption & Footer**: Add a main table title (caption) and source notes (footer), dynamically adjusting their font sizes via the `officer` package.
+
+---
+
+The plugin also adds a new utility menu under:
+**File -> Workspace & RDS**
+
+### 4. Save Object to RDS
+Easily export any R object from your workspace (a styled flextable, a dataframe, or a statistical model) into an `.rds` file to preserve its exact structure for future sessions.
+
+### 5. Load Object from RDS
+Import any `.rds` file back into your RKWard environment safely, assigning it a custom variable name without overwriting existing data.
+
+---
 
 ## Requirements
 

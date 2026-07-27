@@ -18,10 +18,10 @@
 	-->
 	<about
 		name="rk.flextable"
-		shortinfo="An RKWard plugin for creating, formatting, and exporting publication-ready tables using the flextable library."
-		longinfo="An RKWard plugin for creating, formatting, and exporting publication-ready tables using the flextable library."
-		version="0.0.3"
-		releasedate="2026-04-18"
+		shortinfo="An RKWard plugin for creating, formatting, and exporting publication-ready tables. Includes RDS workspace management."
+		longinfo="An RKWard plugin for creating, formatting, and exporting publication-ready tables. Includes RDS workspace management."
+		version="0.0.4"
+		releasedate="2026-07-27"
 		url="https://github.com/AlfCano/rk.flextable"
 		license="GPL (&gt;= 3)"
 	>
@@ -47,6 +47,27 @@
 		>
 		</component>
 		<component
+			id="cmp_CreateTableAdvancdFrmttng"
+			label="Advanced Formatting"
+			type="standard"
+			file="plugins/AdvancedFormatting.xml"
+		>
+		</component>
+		<component
+			id="cmp_CreateTableSaveObjecttRDS"
+			label="Save Object to RDS"
+			type="standard"
+			file="plugins/SaveObjecttoRDS.xml"
+		>
+		</component>
+		<component
+			id="cmp_CreateTableLodObjctfrmRDS"
+			label="Load Object from RDS"
+			type="standard"
+			file="plugins/LoadObjectfromRDS.xml"
+		>
+		</component>
+		<component
 			id="cmp_CreateTableCreateTable"
 			label="Create Table"
 			type="standard"
@@ -65,6 +86,45 @@
 			>
 				<entry
 					component="cmp_CreateTableExportTable"
+				/>
+			</menu>
+		</menu>
+		<menu
+			id="data"
+			label="Data"
+		>
+			<menu
+				id="Reportingflextable"
+				label="Reporting (flextable)"
+			>
+				<entry
+					component="cmp_CreateTableAdvancdFrmttng"
+				/>
+			</menu>
+		</menu>
+		<menu
+			id="file"
+			label="File"
+		>
+			<menu
+				id="WorkspaceRDS"
+				label="Workspace &amp; RDS"
+			>
+				<entry
+					component="cmp_CreateTableSaveObjecttRDS"
+				/>
+			</menu>
+		</menu>
+		<menu
+			id="file"
+			label="File"
+		>
+			<menu
+				id="WorkspaceRDS"
+				label="Workspace &amp; RDS"
+			>
+				<entry
+					component="cmp_CreateTableLodObjctfrmRDS"
 				/>
 			</menu>
 		</menu>

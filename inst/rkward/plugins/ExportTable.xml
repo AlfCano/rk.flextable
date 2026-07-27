@@ -19,14 +19,14 @@
 		-->
 	</logic>
 	<dialog label="Export Flextable">
-		<row id="row_vFOEFMWPPH">
+		<row id="row_vFOEFWPPHT">
 			<varselector id="xp_selector" />
-			<column id="clm_vFOEFMWPPH">
+			<column id="clm_vFOEFWPPHT">
 				<varslot id="xp_obj" label="Flextable Object" source="xp_selector" required="true" />
 				<radio id="xp_fmt" label="Export Format">
-					<option label="Microsoft Word (.docx)" value="docx" checked="true" />
+					<option label="Word (.docx)" value="docx" checked="true" />
 					<option label="PowerPoint (.pptx)" value="pptx" />
-					<option label="HTML (.html)" value="html" />
+					<option label="HTML" value="html" />
 				</radio>
 				<browser label="Output File" type="savefile" id="xp_file" />
 			</column>

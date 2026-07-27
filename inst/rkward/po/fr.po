@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: rk.flextable 0.0.2\n"
+"Project-Id-Version: rk.flextable 0.0.4\n"
 "Report-Msgid-Bugs-To: alfonso.cano@correo.buap.mx\n"
 "POT-Creation-Date: 2026-03-25 10:00-0600\n"
 "PO-Revision-Date: 2026-03-25 10:00-0600\n"
@@ -157,3 +157,123 @@ msgstr "Fichier de Sortie"
 
 msgid "Export Table"
 msgstr "Exporter le Tableau"
+
+# ==========================================================
+# Chaînes manquantes du Composant 1 (Create Table)
+# ==========================================================
+msgid "Value"
+msgstr "Valeur"
+
+msgid "Color"
+msgstr "Couleur"
+
+msgid "Conditional"
+msgstr "Conditionnel"
+
+msgid "Flextable Created"
+msgstr "Flextable Créé"
+
+# ==========================================================
+# Chaînes du Composant 2 (Export Table - Mise à jour)
+# ==========================================================
+msgid "Word (.docx)"
+msgstr "Word (.docx)"
+
+msgid "HTML"
+msgstr "HTML"
+
+msgid "Exporting Flextable..."
+msgstr "Exportation du Flextable..."
+
+# ==========================================================
+# Chaînes du Composant 3 (Advanced Formatting v0.0.4)
+# ==========================================================
+msgid "Advanced Flextable Formatting"
+msgstr "Formatage Avancé du Flextable"
+
+msgid "Advanced Formatting"
+msgstr "Formatage Avancé"
+
+msgid "Flextable Object to Modify"
+msgstr "Objet Flextable à Modifier"
+
+msgid "None (Keep current theme)"
+msgstr "Aucun (Conserver le thème actuel)"
+
+msgid "Academic (theme_booktabs)"
+msgstr "Académique (theme_booktabs)"
+
+msgid "Neon/Retro (theme_tron)"
+msgstr "Néon/Rétro (theme_tron)"
+
+msgid "Table Layout"
+msgstr "Mise en page du Tableau (Layout)"
+
+msgid "Autofit (Adjusts automatically to content)"
+msgstr "Ajustement Auto (S'ajuste automatiquement au contenu)"
+
+msgid "Fixed (Fixed and equal column widths)"
+msgstr "Fixe (Largeurs de colonnes fixes et égales)"
+
+msgid "Table Width Proportion (0.1 to 1.0)"
+msgstr "Proportion de la Largeur du Tableau (0.1 à 1.0)"
+
+msgid "Table Caption (Title)"
+msgstr "Légende du Tableau (Titre)"
+
+msgid "Caption Font Size (px)"
+msgstr "Taille de police de la Légende (px)"
+
+msgid "Footer Text (e.g., Source: ENOE 1T)"
+msgstr "Texte de Pied de page (ex., Source: ENOE 1T)"
+
+msgid "Footer Font Size (px)"
+msgstr "Taille de police du Pied de page (px)"
+
+msgid "Save formatted table as"
+msgstr "Enregistrer le tableau formaté sous"
+
+msgid "Layout & Theme"
+msgstr "Mise en page & Thème"
+
+msgid "Caption (Title)"
+msgstr "Légende (Titre)"
+
+msgid "<i>Note: Styling the caption font uses the 'officer' package automatically.</i>"
+msgstr "<i>Note : Le style de la police de la légende utilise automatiquement le paquet 'officer'.</i>"
+
+msgid "Footer & Output"
+msgstr "Pied de page & Sortie"
+
+# ==========================================================
+# Chaînes des Composants 4 et 5 (Workspace & RDS v0.0.4)
+# ==========================================================
+msgid "file"
+msgstr "Fichier"
+
+msgid "Workspace & RDS"
+msgstr "Espace de Travail & RDS"
+
+msgid "Save Object to RDS"
+msgstr "Enregistrer l'Objet dans RDS"
+
+msgid "Object to save (Table, Plot, Data.frame, List...)"
+msgstr "Objet à enregistrer (Tableau, Graphique, Data frame, Liste...)"
+
+msgid "Save as (.rds)"
+msgstr "Enregistrer sous (.rds)"
+
+msgid "Object Exported to RDS"
+msgstr "Objet Exporté vers RDS"
+
+msgid "Load Object from RDS"
+msgstr "Charger un Objet depuis RDS"
+
+msgid "Select .rds file to load"
+msgstr "Sélectionner un fichier .rds à charger"
+
+msgid "Variable Name in Workspace"
+msgstr "Nom de la Variable dans l'Espace de Travail"
+
+msgid "Object Loaded from RDS"
+msgstr "Objet Chargé depuis RDS"

@@ -1,14 +1,14 @@
 Package: rk.flextable
 Type: Package
 Title: An RKWard plugin for creating, formatting, and exporting
-        publication-ready tables using the flextable library.
-Version: 0.0.3
-Date: 2026-04-18
+        publication-ready tables. Includes RDS workspace management.
+Version: 0.0.4
+Date: 2026-07-27
 Author: Alfonso Cano Robles
 Maintainer: Alfonso Cano Robles <alfonso.cano@correo.buap.mx>
 Enhances: rkward
 Description: An RKWard plugin for creating, formatting, and exporting
-        publication-ready tables using the flextable library.
+        publication-ready tables. Includes RDS workspace management.
 License: GPL (>= 3)
 Encoding: UTF-8
 LazyLoad: yes

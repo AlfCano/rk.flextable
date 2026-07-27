@@ -1,0 +1,69 @@
+<!DOCTYPE rkplugin >
+<document>
+	<!--
+		this code was generated using the rkwarddev package.
+	perhaps don't make changes here, but in the rkwarddev script instead!
+	-->
+	<code file="AdvancedFormatting.js" />
+	<help file="AdvancedFormatting.rkh" />
+	<!--
+		<dependencies>
+		</dependencies>
+	-->
+	<logic>
+		<!--
+			<convert id="!edit!" sources="!edit!" mode="equals" standard="!edit!" />
+		-->
+		<!--
+			<connect governor="!edit!.state" client="!edit!.enabled" />
+		-->
+	</logic>
+	<dialog label="Advanced Flextable Formatting">
+		<row id="row_vLTLTFOMAT">
+			<varselector id="adv_sel" />
+			<tabbook>
+				<tab label="Layout &amp; Theme" id="tab_LayotThm">
+					<column id="clm_vFOMATNKAM">
+						<varslot id="adv_obj" label="Flextable Object to Modify" source="adv_sel" required="true" />
+						<dropdown id="adv_theme" label="Apply Theme">
+							<option label="None (Keep current theme)" value="none" checked="true" />
+							<option label="Academic (theme_booktabs)" value="booktabs" />
+							<option label="Minimal (theme_vanilla)" value="vanilla" />
+							<option label="Boxed (theme_box)" value="box" />
+							<option label="Striped (theme_zebra)" value="zebra" />
+							<option label="Colorful (theme_alafoli)" value="alafoli" />
+							<option label="Dark (theme_vader)" value="vader" />
+							<option label="Neon/Retro (theme_tron)" value="tron" />
+						</dropdown>
+						<dropdown id="adv_layout" label="Table Layout">
+							<option label="Autofit (Adjusts automatically to content)" value="autofit" checked="true" />
+							<option label="Fixed (Fixed and equal column widths)" value="fixed" />
+						</dropdown>
+						<spinbox label="Table Width Proportion (0.1 to 1.0)" id="adv_width" initial="1" min="0.1" max="1" />
+						<stretch />
+					</column>
+				</tab>
+				<tab label="Caption (Title)" id="tab_CaptnTtl">
+					<column id="clm_iTCTCFS116">
+						<input label="Table Caption (Title)" id="adv_caption" />
+						<spinbox label="Caption Font Size (px)" id="adv_cap_size" initial="11" min="6" max="36" />
+						<text id="txt_iNtStyln">
+							<i>
+								Note: Styling the caption font uses the 'officer' package automatically.
+							</i>
+						</text>
+						<stretch />
+					</column>
+				</tab>
+				<tab label="Footer &amp; Output" id="tab_FotrOtpt">
+					<column id="clm_iFTSENOE1T">
+						<input label="Footer Text (e.g., Source: ENOE 1T)" id="adv_footer" />
+						<spinbox label="Footer Font Size (px)" id="adv_foot_size" initial="9" min="6" max="24" />
+						<saveobject label="Save formatted table as" checkable="true" checked="true" initial="my_ft_adv" id="adv_save" />
+						<stretch />
+					</column>
+				</tab>
+			</tabbook>
+		</row>
+	</dialog>
+</document>

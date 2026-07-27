@@ -14,11 +14,26 @@
 		</section>
 	-->
 	<settings>
-		<setting id="xp_obj">
+		<caption id="tab_LayotThm" />
+		<setting id="adv_obj">
 		</setting>
-		<setting id="xp_fmt">
+		<setting id="adv_theme">
 		</setting>
-		<setting id="xp_file">
+		<setting id="adv_layout">
+		</setting>
+		<setting id="adv_width">
+		</setting>
+		<caption id="tab_CaptnTtl" />
+		<setting id="adv_caption">
+		</setting>
+		<setting id="adv_cap_size">
+		</setting>
+		<caption id="tab_FotrOtpt" />
+		<setting id="adv_footer">
+		</setting>
+		<setting id="adv_foot_size">
+		</setting>
+		<setting id="adv_save">
 		</setting>
 	</settings>
 	<!--
