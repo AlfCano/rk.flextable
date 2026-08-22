@@ -20,8 +20,8 @@
 		name="rk.flextable"
 		shortinfo="An RKWard plugin for creating, formatting, and exporting publication-ready tables. Includes RDS workspace management."
 		longinfo="An RKWard plugin for creating, formatting, and exporting publication-ready tables. Includes RDS workspace management."
-		version="0.0.4"
-		releasedate="2026-07-27"
+		version="0.0.5"
+		releasedate="2026-08-21"
 		url="https://github.com/AlfCano/rk.flextable"
 		license="GPL (&gt;= 3)"
 	>

@@ -47,6 +47,7 @@
 					<column id="clm_iTCTCFS116">
 						<input label="Table Caption (Title)" id="adv_caption" />
 						<spinbox label="Caption Font Size (px)" id="adv_cap_size" initial="11" min="6" max="36" />
+						<checkbox id="adv_clear_cap" label="Overwrite existing caption" value="1" checked="true" />
 						<text id="txt_iNtStyln">
 							<i>
 								Note: Styling the caption font uses the 'officer' package automatically.
@@ -59,7 +60,12 @@
 					<column id="clm_iFTSENOE1T">
 						<input label="Footer Text (e.g., Source: ENOE 1T)" id="adv_footer" />
 						<spinbox label="Footer Font Size (px)" id="adv_foot_size" initial="9" min="6" max="24" />
+						<checkbox id="adv_clear_foot" label="Overwrite existing footer" value="1" checked="true" />
 						<saveobject label="Save formatted table as" checkable="true" checked="true" initial="my_ft_adv" id="adv_save" />
+						<dropdown id="adv_foot_pos" label="Position (if not overwriting)">
+							<option label="Bottom (Below existing notes)" value="FALSE" checked="true" />
+							<option label="Top (Above existing notes)" value="TRUE" />
+						</dropdown>
 						<stretch />
 					</column>
 				</tab>

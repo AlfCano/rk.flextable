@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: rk.flextable 0.0.4\n"
+"Project-Id-Version: rk.flextable 0.0.5\n"
 "Report-Msgid-Bugs-To: alfonso.cano@correo.buap.mx\n"
 "POT-Creation-Date: 2026-03-25 10:00-0600\n"
 "PO-Revision-Date: 2026-03-25 10:00-0600\n"
@@ -275,3 +275,19 @@ msgstr "Variablenname im Arbeitsbereich"
 
 msgid "Object Loaded from RDS"
 msgstr "Objekt aus RDS geladen"
+
+# Neue Elemente v0.0.5
+msgid "Overwrite existing caption"
+msgstr "Vorhandene Beschriftung überschreiben"
+
+msgid "Overwrite existing footer"
+msgstr "Vorhandene Fußzeile überschreiben"
+
+msgid "Position (if not overwriting)"
+msgstr "Position (wenn nicht überschrieben wird)"
+
+msgid "Bottom (Below existing notes)"
+msgstr "Unten (Unter vorhandenen Notizen)"
+
+msgid "Top (Above existing notes)"
+msgstr "Oben (Über vorhandenen Notizen)"

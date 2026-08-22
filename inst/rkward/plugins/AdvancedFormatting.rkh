@@ -28,12 +28,18 @@
 		</setting>
 		<setting id="adv_cap_size">
 		</setting>
+		<setting id="adv_clear_cap">
+		</setting>
 		<caption id="tab_FotrOtpt" />
 		<setting id="adv_footer">
 		</setting>
 		<setting id="adv_foot_size">
 		</setting>
+		<setting id="adv_clear_foot">
+		</setting>
 		<setting id="adv_save">
+		</setting>
+		<setting id="adv_foot_pos">
 		</setting>
 	</settings>
 	<!--
